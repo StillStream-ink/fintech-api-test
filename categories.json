@@ -1,0 +1,14 @@
+[
+  {
+    "name": "产品缺陷",
+    "matchedStatuses": ["failed", "broken"]
+  },
+  {
+    "name": "安全漏洞",
+    "matchedStatuses": ["failed"]
+  },
+  {
+    "name": "预期失败(已知Bug)",
+    "matchedStatuses": ["skipped"]
+  }
+]

@@ -1,0 +1,27 @@
+cd E:\fintech-api-test
+
+$content = @'
+# ============ Web 框架 ============
+flask==3.0.3
+flask-sqlalchemy==3.1.1
+
+# ============ 测试框架 ============
+pytest==7.4.4
+pytest-cov==5.0.0
+
+# ============ HTTP 客户端 ============
+requests==2.31.0
+
+# ============ 契约校验 ============
+pydantic==2.13.5
+
+# ============ 报告 ============
+allure-pytest==2.13.2
+
+# ============ 数据生成 ============
+Faker==40.39.0
+'@
+
+[System.IO.File]::WriteAllText("$PWD\requirements.txt", $content, [System.Text.UTF8Encoding]::new($false))
+Write-Host "[OK] requirements.txt 已更新"
+Get-Content requirements.txt
