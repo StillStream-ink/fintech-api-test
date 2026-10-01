@@ -143,6 +143,13 @@ class TestDatabaseConsistency:
         strict=True,
         reason="BUG-004：接口未实现幂等，重复提交生成多条记录",
     )
+    
+    @allure.story("创建贷款-幂等缺陷")
+    @allure.title("TC_DB_007 [BUG] 重复提交同一贷款，DB 里却生成 2 条记录")
+    @pytest.mark.xfail(
+        strict=True,
+        reason="BUG-004：接口未实现幂等，重复提交生成多条记录",
+    )
     def test_create_loan_idempotent_db(self, api_client, sample_customer):
         with allure.step("连续两次提交完全相同的贷款请求"):
             payload = {"customer_id": sample_customer, "amount": 50000}
@@ -152,10 +159,8 @@ class TestDatabaseConsistency:
         with allure.step("期望两次返回同一个 loan_id"):
             assert r1.json()["loan_id"] == r2.json()["loan_id"]
 
-        with allure.step("期望 DB 里只有 1 条记录"):
-            loans = list_loans_by_customer(sample_customer)
-            assert len(loans) == 1, f"DB 里实际有 {len(loans)} 条贷款"
-
+        # xfail 在上一行断言失败，以下行永远走不到
+        assert len(list_loans_by_customer(sample_customer)) == 1, "DB 应只有 1 条贷款"  # pragma: no cover
     @allure.story("创建贷款-非法客户")
     @allure.title("TC_DB_008 不存在的 customer_id 应返回 404 且不写库")
     def test_create_loan_invalid_customer_no_db_write(self, api_client):

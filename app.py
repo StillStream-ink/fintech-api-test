@@ -1,6 +1,11 @@
 import os
 from pathlib import Path
 
+# 子进程启动时同步启动覆盖率统计（如果环境变量存在）
+if os.getenv("COVERAGE_PROCESS_START"):
+    import coverage
+    coverage.process_startup()
+
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
@@ -10,13 +15,8 @@ app = Flask(__name__)
 # ==============================================================================
 # 数据库配置：使用绝对路径，避免 Flask-SQLAlchemy 拼错 instance 路径
 # ==============================================================================
-# 默认路径：<项目根>/instance/loan.db（绝对路径）
-_default_db = Path(app.instance_path) / "loan.db"
-# 优先读环境变量；没有则用默认
-db_path = Path(os.getenv("MOCK_DB_PATH", str(_default_db)))
-# 确保目录存在
+db_path = Path(os.getenv("MOCK_DB_PATH", "instance/loan.db")).resolve()
 db_path.parent.mkdir(parents=True, exist_ok=True)
-
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{db_path.as_posix()}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -289,5 +289,5 @@ if __name__ == '__main__':
         db.drop_all()
         db.create_all()
     debug_mode = os.getenv("FLASK_DEBUG", "1") == "1"
-    # 并发模式下 use_reloader 必须为 False，否则会启动两个进程抢端口
+    # use_reloader=False 防止 debug 模式启动双进程抢端口
     app.run(host="127.0.0.1", port=5000, debug=debug_mode, use_reloader=False)

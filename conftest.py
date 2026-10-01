@@ -29,6 +29,11 @@ else:
 # 关键：设置为绝对路径，让 app.py 和 db_helper.py 指向同一个文件
 os.environ["MOCK_DB_PATH"] = str(INSTANCE_DIR / DB_FILE)
 
+# 让子进程（Flask 服务）也上报覆盖率
+_COVERAGERC = Path(__file__).resolve().parent / ".coveragerc"
+if _COVERAGERC.exists():
+    os.environ["COVERAGE_PROCESS_START"] = str(_COVERAGERC)
+
 # 必须在设置完环境变量后，再导入 app 和 CreditAPI
 from credit_api import CreditAPI
 from app import app, db
@@ -49,7 +54,12 @@ def _is_server_ready() -> bool:
 
 
 def _run_server():
-    """在子进程中运行 Flask 服务。"""
+    """在子进程中运行 Flask 服务（含覆盖率上报）。"""
+    # 让子进程也参与覆盖率统计
+    if os.getenv("COVERAGE_PROCESS_START"):
+        import coverage
+        coverage.process_startup()
+
     with app.app_context():
         db.drop_all()
         db.create_all()

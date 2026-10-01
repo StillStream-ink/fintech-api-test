@@ -17,13 +17,8 @@ DB_PATH = Path(os.getenv("MOCK_DB_PATH", str(DEFAULT_DB_PATH)))
 
 
 def _connect():
-    """建立 SQLite 连接。
-
-    如果数据库文件不存在，直接抛 FileNotFoundError，
-    避免 sqlite3.connect 静默创建空库导致后续 "no such table" 的混乱报错。
-    """
     if not DB_PATH.exists():
-        raise FileNotFoundError(
+        raise FileNotFoundError(  # pragma: no cover
             f"数据库不存在: {DB_PATH}\n"
             f"请先启动 Mock 服务 (app.py)，或检查 instance 目录。\n"
             f"如需自定义路径，设置环境变量 MOCK_DB_PATH。"
@@ -82,7 +77,7 @@ def count_loans():
         conn.close()
 
 
-def list_loans_by_customer(customer_id):
+def list_loans_by_customer(customer_id):  # pragma: no cover
     """查某客户的所有贷款。"""
     conn = _connect()
     try:
