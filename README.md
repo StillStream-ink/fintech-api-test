@@ -201,29 +201,48 @@ py scripts/scorer.py
 ---
 
 ## 九、性能测试
+### 单档压测
 
 ```powershell
-# 终端 1：启动 Mock 服务
-py app.py
-
-# 终端 2：启动 Locust
 py -m locust -f locustfile.py
+# 浏览器打开 http://localhost:8089
+# Number of users: 100, Ramp up: 10, Host: http://127.0.0.1:5000|
+
+**基线**（100 并发）：
+
+| 指标     | 值     |
+| ------ | ----- |
+| RPS    | 137.3 |
+| 失败率    | 0%    |
+| Median | 13ms  |
+| 95%ile | 91ms  |
+| 99%ile | 170ms |
+
+### 梯度压测
+
+powershell
+
+```
+# 终端 A：py app.py
+# 终端 B：py scripts\run_load_test.py
+# 汇总：py scripts\summarize_perf.py
 ```
 
-浏览器打开 `http://localhost:8089`：
-- Number of users: 100
-- Ramp up: 10
-- Host: `http://127.0.0.1:5000`
+**四档梯度对比**（每档 60 秒）：
 
-**当前基线**：
+| 并发  | 总请求  | 失败率 | 平均响应   | P95  | P99   | RPS   |
+| --- | ---- | --- | ------ | ---- | ----- | ----- |
+| 10  | 958  | 0%  | 12.9ms | 30ms | 48ms  | 16.1  |
+| 30  | 2686 | 0%  | 12.8ms | 30ms | 56ms  | 45.2  |
+| 60  | 5093 | 0%  | 14.7ms | 36ms | 61ms  | 85.9  |
+| 100 | 8159 | 0%  | 30.1ms | 91ms | 170ms | 137.3 |
 
-| 指标 | 值 |
-|---|---|
-| RPS | 148.4 |
-| 失败率 | 0% |
-| Median | 13ms |
-| 95%ile | 59ms |
-| 99%ile | 120ms |
+**结论**：
+
+-   RPS 随并发接近线性增长，未饱和
+-   60 并发前响应时间稳定（平均 < 15ms）
+-   **100 并发为性能拐点**：P95 从 36ms 跃升至 91ms
+-   瓶颈定位为 SQLite 单文件写锁竞争
 
 ---
 ## 十、持续集成
