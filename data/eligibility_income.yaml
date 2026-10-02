@@ -1,0 +1,24 @@
+- case_id: INC_001
+  desc: 收入为 0
+  input: {age: 22, income: 0, credit_score: 700}
+  expected_eligible: false
+
+- case_id: INC_002
+  desc: 收入为 2999（差 1 元不足）
+  input: {age: 22, income: 2999, credit_score: 700}
+  expected_eligible: false
+
+- case_id: INC_003
+  desc: 收入为 3000（刚好达标）
+  input: {age: 22, income: 3000, credit_score: 700}
+  expected_eligible: true
+
+- case_id: INC_004
+  desc: 收入为 10000
+  input: {age: 22, income: 10000, credit_score: 700}
+  expected_eligible: true
+
+- case_id: INC_005
+  desc: 收入为 99999999（接近上限）
+  input: {age: 22, income: 99999999, credit_score: 700}
+  expected_eligible: true

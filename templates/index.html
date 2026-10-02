@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}首页 - Fintech 信贷{% endblock %}
+
+{% block content %}
+<h1>欢迎使用 Fintech 信贷系统</h1>
+<p>这是一个自研的信贷 Mock 服务，支持注册、资格检查、贷款申请和查询。</p>
+
+<div class="cards">
+    <div class="card">
+        <h2>📝 用户注册</h2>
+        <p>创建新客户</p>
+        <a href="/register" class="btn">去注册</a>
+    </div>
+    <div class="card">
+        <h2>💰 贷款申请</h2>
+        <p>提交贷款申请</p>
+        <a href="/loan/apply" class="btn">去申请</a>
+    </div>
+    <div class="card">
+        <h2>📋 贷款列表</h2>
+        <p>查看所有贷款</p>
+        <a href="/loan/list" class="btn">查看列表</a>
+    </div>
+</div>
+{% endblock %}

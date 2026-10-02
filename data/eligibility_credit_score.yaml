@@ -1,0 +1,24 @@
+- case_id: CS_001
+  desc: 信用分为 0
+  input: {age: 22, income: 8000, credit_score: 0}
+  expected_eligible: false
+
+- case_id: CS_002
+  desc: 信用分为 599（差 1 分不足）
+  input: {age: 22, income: 8000, credit_score: 599}
+  expected_eligible: false
+
+- case_id: CS_003
+  desc: 信用分为 600（刚好达标）
+  input: {age: 22, income: 8000, credit_score: 600}
+  expected_eligible: true
+
+- case_id: CS_004
+  desc: 信用分为 850（优秀）
+  input: {age: 22, income: 8000, credit_score: 850}
+  expected_eligible: true
+
+- case_id: CS_005
+  desc: 信用分为 1000（上限）
+  input: {age: 22, income: 8000, credit_score: 1000}
+  expected_eligible: true

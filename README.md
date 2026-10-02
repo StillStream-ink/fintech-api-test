@@ -226,8 +226,26 @@ py -m locust -f locustfile.py
 | 99%ile | 120ms |
 
 ---
+## 十、持续集成
 
-## 十、已知 BUG
+项目支持两种 CI 方式：
+
+| 平台 | 配置文件 | 触发条件 |
+|---|---|---|
+| GitHub Actions | `.github/workflows/test.yml` | push / PR / 手动 |
+| Jenkins | `Jenkinsfile` | Jenkins 任务配置的 SCM 轮询 / Webhook |
+
+两者执行一致的流程：
+Checkout → Setup Python → Install Deps → pytest + 覆盖率 → 质量门禁 → 归档报告
+```text
+
+**门禁规则**：
+- 测试通过率 < 90% → 失败
+- 测试代码覆盖率 < 80% → 失败
+```
+---
+
+## 十一、已知 BUG
 
 见 [KNOWN_BUGS.md](./KNOWN_BUGS.md)。
 

@@ -1,34 +1,57 @@
-# Python
+# ==================== Python ====================
 __pycache__/
 *.py[cod]
-.pytest_cache/
+*$py.class
+*.so
+.Python
+build/
+dist/
 *.egg-info/
+.eggs/
 
-# 虚拟环境
+# ==================== 虚拟环境 ====================
 .venv/
 venv/
 env/
+ENV/
 
-# 测试产物
-*.log
+# ==================== 测试产物 ====================
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+test-results/
 allure-results/
 allure-report/
-test-results/
-reports/
 
-# 数据库
-*.db
-*.db-journal
+# ==================== 数据库 ====================
+instance/*.db
+instance/*.db-wal
+instance/*.db-shm
+instance/loan_gw*.db*
+*.sqlite
+*.sqlite3
 
-# IDE
+# ==================== 报告归档（可选保留，一般不提交） ====================
+reports/*.png
+reports/*.csv
+reports/*.html
+reports/*.txt
+reports/20*/
+!reports/.gitkeep
+
+# ==================== IDE ====================
 .idea/
 .vscode/
+*.swp
+*.swo
+*~
 
-# 备份
-*.bak
+# ==================== 操作系统 ====================
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# 并发测试临时库
-instance/loan_gw*.db
-instance/loan_gw*.db-wal
-instance/loan_gw*.db-shm
-loan_gw*.db
+# ==================== 日志 ====================
+*.log
+logs/

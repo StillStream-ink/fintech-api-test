@@ -3,6 +3,9 @@
 设计原则：先跑一遍看服务端真实行为，不预判对错。
 - 缺参数 / 类型错误 / 空串 / 负数 / 超大值 / 非法 JSON
 - 每个参数值代表一类独立风险
+
+注意：资格预审的"业务边界"（年龄 18/60、收入 3000、信用分 600）
+已迁移到 test_ddt_eligibility.py，本文件只保留"参数校验层"的边界。
 """
 import allure
 import pytest
@@ -74,7 +77,7 @@ class TestRegisterBoundary:
 
 @allure.feature("参数化边界校验")
 class TestEligibilityBoundary:
-    """POST /api/v1/check-eligibility 的边界测试"""
+    """POST /api/v1/check-eligibility 的边界测试（仅参数校验层）"""
 
     @allure.story("资格检查-缺失字段")
     @pytest.mark.parametrize("missing_field", [
@@ -99,26 +102,6 @@ class TestEligibilityBoundary:
         assert resp.status_code == 400, \
             f"{desc} 应被拒绝，实际 {resp.status_code}"
 
-    @allure.story("资格检查-年龄业务边界")
-    @pytest.mark.parametrize("age, expected_eligible", [
-        (0, False),     # 合法整数但业务拒绝
-        (17, False),
-        (18, True),
-        (59, True),
-        (60, True),
-        (61, False),
-        (100, False),
-    ])
-    def test_eligibility_age_boundary(self, api_client, age, expected_eligible):
-        """合法范围内的年龄，走业务逻辑判断（返回 200）"""
-        resp = api_client.check_eligibility({
-            "age": age, "income": 8000, "credit_score": 700,
-        })
-        assert resp.status_code == 200
-        data = resp.json()
-        assert data["eligible"] is expected_eligible, \
-            f"age={age} 期望 eligible={expected_eligible}，实际 {data}"
-
     @allure.story("资格检查-年龄非法参数")
     @pytest.mark.parametrize("age", [-1, 151, 999])
     def test_eligibility_age_invalid(self, api_client, age):
@@ -129,23 +112,6 @@ class TestEligibilityBoundary:
         assert resp.status_code == 400, \
             f"age={age} 应被参数校验拒绝，实际 {resp.status_code}"
 
-    @allure.story("资格检查-收入业务边界")
-    @pytest.mark.parametrize("income, expected_eligible", [
-        (0, False),
-        (2999, False),
-        (3000, True),
-        (10000, True),
-        (99999999, True),   # 接近上限
-    ])
-    def test_eligibility_income_boundary(self, api_client, income, expected_eligible):
-        resp = api_client.check_eligibility({
-            "age": 22, "income": income, "credit_score": 700,
-        })
-        assert resp.status_code == 200
-        data = resp.json()
-        assert data["eligible"] is expected_eligible, \
-            f"income={income} 期望 eligible={expected_eligible}，实际 {data}"
-
     @allure.story("资格检查-收入非法参数")
     @pytest.mark.parametrize("income", [-1, 100_000_001, 999999999])
     def test_eligibility_income_invalid(self, api_client, income):
@@ -155,23 +121,6 @@ class TestEligibilityBoundary:
         })
         assert resp.status_code == 400, \
             f"income={income} 应被参数校验拒绝，实际 {resp.status_code}"
-
-    @allure.story("资格检查-信用分业务边界")
-    @pytest.mark.parametrize("credit_score, expected_eligible", [
-        (0, False),
-        (599, False),
-        (600, True),
-        (850, True),
-        (1000, True),   # 上限
-    ])
-    def test_eligibility_credit_score_boundary(self, api_client, credit_score, expected_eligible):
-        resp = api_client.check_eligibility({
-            "age": 22, "income": 8000, "credit_score": credit_score,
-        })
-        assert resp.status_code == 200
-        data = resp.json()
-        assert data["eligible"] is expected_eligible, \
-            f"credit_score={credit_score} 期望 eligible={expected_eligible}，实际 {data}"
 
     @allure.story("资格检查-信用分非法参数")
     @pytest.mark.parametrize("credit_score", [-1, 1001, 9999])
