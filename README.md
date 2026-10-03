@@ -1,6 +1,12 @@
 # Fintech API Test — Mock 信贷服务自动化测试
 
-一个完整的 **Mock 信贷服务 + 自动化测试框架**，覆盖 API 功能、边界、契约、数据一致性、状态机、安全、性能测试，并配备质量门禁和评分系统。
+[![Tests](https://github.com/StillStream-ink/fintech-api-test/actions/workflows/test.yml/badge.svg)](https://github.com/StillStream-ink/fintech-api-test/actions/workflows/test.yml)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![pytest](https://img.shields.io/badge/pytest-7.x-green)
+![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
+![license](https://img.shields.io/badge/license-MIT-lightgrey)
+
+一个完整的 **Mock 信贷服务 + 自动化测试框架**，覆盖 API 功能、边界、契约、数据一致性、状态机、安全、性能测试，并配备 **CI 流水线**、质量门禁和评分系统。
 
 ---
 
@@ -10,21 +16,24 @@
 
 - 学习/演示金融系统 API 的测试方法
 - 作为团队内部的测试框架模板
-- 练习 pytest + Allure + pydantic + Locust 的工程化组合
+- 练习 pytest + Allure + pydantic + Locust + CI/CD 的工程化组合
 
 **核心特性**：
 
 | 能力 | 说明 |
 |---|---|
 | Mock 服务 | Flask + SQLAlchemy + SQLite，实现完整贷款状态机 |
-| 功能测试 | 104 个用例，覆盖注册、资格预审、贷款全生命周期 |
+| 功能测试 | 118 个用例，覆盖注册、资格预审、贷款全生命周期 |
 | 契约测试 | pydantic v2 校验响应字段名/类型/必填项 |
 | 数据一致性 | 接口调用 + SQLite 直连双检 |
 | 状态机测试 | PENDING → APPROVED → DISBURSED → SETTLED 全路径 |
 | 安全测试 | 3 个 xfail 锁定已知安全缺陷（越权、未鉴权、无幂等） |
-| 性能测试 | Locust 压测 5 个核心接口，100 并发下 148 RPS，0 失败 |
+| 数据驱动 | YAML 驱动 17 个边界场景，新场景不改代码 |
+| API 分层 | BaseAPI（通用）+ CreditAPI（业务），PO 思想 |
+| 性能测试 | Locust 梯度压测 10/30/60/100 并发，100 并发 137 RPS，0 失败 |
 | 报告专业化 | Allure step 全覆盖，失败可精确定位到步骤 |
-| 质量门禁 | 通过率 < 阈值则 CI 失败 |
+| **CI/CD** | **GitHub Actions + Jenkinsfile 双流水线** |
+| 质量门禁 | 通过率 <90% 或覆盖率 <80% 则 CI 失败 |
 | 评分系统 | 0-20 分量化测试质量 |
 
 ---
@@ -207,7 +216,7 @@ py scripts/scorer.py
 py -m locust -f locustfile.py
 # 浏览器打开 http://localhost:8089
 # Number of users: 100, Ramp up: 10, Host: http://127.0.0.1:5000|
-
+```
 **基线**（100 并发）：
 
 | 指标     | 值     |
@@ -220,9 +229,7 @@ py -m locust -f locustfile.py
 
 ### 梯度压测
 
-powershell
-
-```
+```powershell
 # 终端 A：py app.py
 # 终端 B：py scripts\run_load_test.py
 # 汇总：py scripts\summarize_perf.py

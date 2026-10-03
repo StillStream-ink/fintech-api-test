@@ -1,90 +1,112 @@
-﻿"""SQLite 数据库直连辅助。
+﻿"""数据库直连辅助（支持 SQLite / MySQL）。
 
 用于接口 + 数据库双检：接口返回成功 → 数据真的落库。
 
-设计要点：
-- 数据库文件不存在时直接报错，而不是静默创建空库
-- 启用 WAL + busy_timeout，避免 Flask 与测试并发访问时 database is locked
-- 支持 MOCK_DB_PATH 环境变量覆盖默认路径，避免与 app.py 路径漂移
+通过环境变量 DATABASE_URL 切换数据库：
+- 默认：SQLite（instance/loan.db）
+- MySQL：mysql+pymysql://root:pass@localhost:3306/fintech
 """
 import os
-import sqlite3
 from pathlib import Path
 
+from sqlalchemy import create_engine, text
+from sqlalchemy.engine import Engine
 
-DEFAULT_DB_PATH = Path(__file__).resolve().parent.parent / "instance" / "loan.db"
-DB_PATH = Path(os.getenv("MOCK_DB_PATH", str(DEFAULT_DB_PATH)))
+# ==================== 引擎（单例） ====================
 
+DEFAULT_SQLITE_PATH = Path(__file__).resolve().parent.parent / "instance" / "loan.db"
 
-def _connect():
-    if not DB_PATH.exists():
-        raise FileNotFoundError(  # pragma: no cover
-            f"数据库不存在: {DB_PATH}\n"
-            f"请先启动 Mock 服务 (app.py)，或检查 instance 目录。\n"
-            f"如需自定义路径，设置环境变量 MOCK_DB_PATH。"
-        )
-
-    conn = sqlite3.connect(str(DB_PATH), timeout=10)
-    conn.row_factory = sqlite3.Row
-    # WAL 模式：允许读写并发，避免 Flask 与测试互锁
-    conn.execute("PRAGMA journal_mode=WAL")
-    # busy_timeout：遇到锁时最多等 5 秒再报错，而不是立刻失败
-    conn.execute("PRAGMA busy_timeout=5000")
-    return conn
+_engine: Engine | None = None
 
 
-def get_customer(customer_id):
+def _build_db_url() -> str:
+    url = os.getenv("DATABASE_URL", "").strip()
+    if url:
+        return url
+
+    # 兼容旧逻辑
+    mock_path = os.getenv("MOCK_DB_PATH", "").strip()
+    if mock_path:
+        return f"sqlite:///{Path(mock_path).as_posix()}"
+
+    return f"sqlite:///{DEFAULT_SQLITE_PATH.as_posix()}"
+
+
+def get_engine() -> Engine:
+    """获取数据库引擎（单例）。"""
+    global _engine
+    if _engine is None:
+        url = _build_db_url()
+        if not url.startswith("sqlite") and not DEFAULT_SQLITE_PATH.exists():
+            # 非 SQLite 场景下，SQLite 文件不存在不是错误
+            pass
+        elif url.startswith("sqlite") and not DEFAULT_SQLITE_PATH.exists():
+            raise FileNotFoundError(
+                f"SQLite 数据库不存在: {DEFAULT_SQLITE_PATH}\n"
+                f"请先启动 Mock 服务 (app.py)，或设置 MOCK_DB_PATH。"
+            )
+
+        connect_args = {}
+        if url.startswith("sqlite"):
+            connect_args = {"check_same_thread": False}
+
+        _engine = create_engine(url, connect_args=connect_args, pool_pre_ping=True)
+
+        # SQLite 启用 WAL 模式，减少锁竞争
+        if url.startswith("sqlite"):
+            with _engine.connect() as conn:
+                conn.execute(text("PRAGMA journal_mode=WAL"))
+                conn.execute(text("PRAGMA busy_timeout=5000"))
+    return _engine
+
+
+def reset_engine() -> None:
+    """重置引擎（测试环境用）。"""
+    global _engine
+    if _engine is not None:
+        _engine.dispose()
+    _engine = None
+
+
+# ==================== 查询接口 ====================
+
+def get_customer(customer_id: int) -> dict | None:
     """按 ID 查客户，返回 dict 或 None。"""
-    conn = _connect()
-    try:
+    with get_engine().connect() as conn:
         row = conn.execute(
-            "SELECT id, name, age, income, credit_score FROM customer WHERE id = ?",
-            (customer_id,),
-        ).fetchone()
-    finally:
-        conn.close()
+            text("SELECT id, name, age, income, credit_score FROM customer WHERE id = :id"),
+            {"id": customer_id},
+        ).mappings().first()
     return dict(row) if row else None
 
 
-def get_loan(loan_id):
+def get_loan(loan_id: int) -> dict | None:
     """按 ID 查贷款，返回 dict 或 None。"""
-    conn = _connect()
-    try:
+    with get_engine().connect() as conn:
         row = conn.execute(
-            "SELECT id, customer_id, amount, status FROM loan WHERE id = ?",
-            (loan_id,),
-        ).fetchone()
-    finally:
-        conn.close()
+            text("SELECT id, customer_id, amount, status FROM loan WHERE id = :id"),
+            {"id": loan_id},
+        ).mappings().first()
     return dict(row) if row else None
 
 
-def count_customers():
+def count_customers() -> int:
     """客户表总行数。"""
-    conn = _connect()
-    try:
-        return conn.execute("SELECT COUNT(*) FROM customer").fetchone()[0]
-    finally:
-        conn.close()
+    with get_engine().connect() as conn:
+        return conn.execute(text("SELECT COUNT(*) FROM customer")).scalar() or 0
 
 
-def count_loans():
+def count_loans() -> int:
     """贷款表总行数。"""
-    conn = _connect()
-    try:
-        return conn.execute("SELECT COUNT(*) FROM loan").fetchone()[0]
-    finally:
-        conn.close()
+    with get_engine().connect() as conn:
+        return conn.execute(text("SELECT COUNT(*) FROM loan")).scalar() or 0
 
 
-def list_loans_by_customer(customer_id):  # pragma: no cover
+def list_loans_by_customer(customer_id: int) -> list[dict]:  # pragma: no cover
     """查某客户的所有贷款。"""
-    conn = _connect()
-    try:
+    with get_engine().connect() as conn:
         rows = conn.execute(
-            "SELECT id, amount, status FROM loan WHERE customer_id = ?",
-            (customer_id,),
-        ).fetchall()
-    finally:
-        conn.close()
+            text("SELECT id, amount, status FROM loan WHERE customer_id = :cid"),
+            {"cid": customer_id},
+        ).mappings().all()
     return [dict(r) for r in rows]

@@ -26,8 +26,8 @@ else:
     PORT = 5000
     DB_FILE = "loan.db"
 
-# 关键：设置为绝对路径，让 app.py 和 db_helper.py 指向同一个文件
-os.environ["MOCK_DB_PATH"] = str(INSTANCE_DIR / DB_FILE)
+if not os.getenv("DATABASE_URL"):
+    os.environ["MOCK_DB_PATH"] = str(INSTANCE_DIR / DB_FILE)
 
 # 让子进程（Flask 服务）也上报覆盖率
 _COVERAGERC = Path(__file__).resolve().parent / ".coveragerc"
@@ -55,7 +55,6 @@ def _is_server_ready() -> bool:
 
 def _run_server():
     """在子进程中运行 Flask 服务（含覆盖率上报）。"""
-    # 让子进程也参与覆盖率统计
     if os.getenv("COVERAGE_PROCESS_START"):
         import coverage
         coverage.process_startup()
@@ -63,7 +62,6 @@ def _run_server():
     with app.app_context():
         db.drop_all()
         db.create_all()
-    # use_reloader=False 至关重要，否则 debug 模式会启动两个进程
     app.run(host="127.0.0.1", port=PORT, debug=False, use_reloader=False)
 
 

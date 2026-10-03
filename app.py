@@ -13,11 +13,23 @@ from sqlalchemy.exc import SQLAlchemyError
 app = Flask(__name__)
 
 # ==============================================================================
-# 数据库配置：使用绝对路径，避免 Flask-SQLAlchemy 拼错 instance 路径
+# 数据库配置
+# 优先读 DATABASE_URL（MySQL / 其他数据库）
+# 未设置时回退到 SQLite（本地开发 / 单元测试）
 # ==============================================================================
-db_path = Path(os.getenv("MOCK_DB_PATH", "instance/loan.db")).resolve()
-db_path.parent.mkdir(parents=True, exist_ok=True)
-app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{db_path.as_posix()}"
+def _build_db_uri() -> str:
+    # 1. 显式传入完整 URL
+    url = os.getenv("DATABASE_URL", "").strip()
+    if url:
+        return url
+
+    # 2. 兼容旧逻辑：MOCK_DB_PATH 指定 SQLite 文件路径
+    db_path = Path(os.getenv("MOCK_DB_PATH", "instance/loan.db")).resolve()
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    return f"sqlite:///{db_path.as_posix()}"
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = _build_db_uri()
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
