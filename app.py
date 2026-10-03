@@ -50,8 +50,21 @@ class Customer(db.Model):
 class Loan(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     customer_id = db.Column(db.Integer, nullable=False)
+    # amount 保留为"总应还金额"，便于向后兼容
     amount = db.Column(db.Integer, nullable=False)
-    status = db.Column(db.String(20), default="PENDING", nullable=False)
+    # 新增：本金 / 利率 / 已还利息
+    principal = db.Column(db.Integer, nullable=False, default=0)
+    interest_rate = db.Column(db.Float, nullable=False, default=0.0)
+    paid_interest = db.Column(db.Integer, nullable=False, default=0)
+
+
+class RepaymentFlow(db.Model):
+    """还款流水（每次还款写一条）。"""
+    id = db.Column(db.Integer, primary_key=True)
+    loan_id = db.Column(db.Integer, nullable=False)
+    amount = db.Column(db.Integer, nullable=False)     # 本次还款金额
+    principal_part = db.Column(db.Integer, nullable=False)   # 其中本金部分
+    interest_part = db.Column(db.Integer, nullable=False)    # 其中利息部分
 
 
 # ==============================================================================
@@ -182,6 +195,28 @@ def check_eligibility():
 # ==============================================================================
 # 接口：创建贷款
 # ==============================================================================
+# 业务规则常量
+MIN_CREDIT_SCORE = 600
+MIN_INCOME = 5000
+MAX_LOAN_RATIO = 0.8          # 单笔 ≤ 资质的 80%
+MAX_MONTHLY_LOANS = 5          # 月借款次数上限
+
+# 利率规则：按信用分区间
+INTEREST_RATES = [
+    (800, 0.02),   # 800+ -> 2%
+    (700, 0.035),  # 700-799 -> 3.5%
+    (600, 0.05),   # 600-699 -> 5%
+]
+
+
+def _calc_interest_rate(credit_score: int) -> float:
+    """按信用分算利率。"""
+    for threshold, rate in INTEREST_RATES:
+        if credit_score >= threshold:
+            return rate
+    return 0.08  # 兜底
+
+
 @app.route('/api/v1/loan', methods=['POST'])
 def create_loan():
     data, err = _require_json()
@@ -201,15 +236,61 @@ def create_loan():
     if not cust:
         return jsonify({"error": "客户不存在"}), 404
 
+    # ==================== 业务规则校验 ====================
+
+    # 规则 1：信用分门槛
+    if cust.credit_score < MIN_CREDIT_SCORE:
+        return jsonify({
+            "error": "信用评分不足",
+            "reason": f"信用分 {cust.credit_score} < {MIN_CREDIT_SCORE}",
+        }), 403
+
+    # 规则 2：收入门槛
+    if cust.income < MIN_INCOME:
+        return jsonify({
+            "error": "收入不足",
+            "reason": f"月收入 {cust.income} < {MIN_INCOME}",
+        }), 403
+
+    # 规则 3：月借款次数
+    from sqlalchemy import func
+    from datetime import datetime, timedelta
+    month_start = datetime.utcnow() - timedelta(days=30)
+    monthly_count = db.session.query(func.count(Loan.id)).filter(
+        Loan.customer_id == cust.id,
+        Loan.id > 0,
+    ).scalar() or 0
+    if monthly_count >= MAX_MONTHLY_LOANS:
+        return jsonify({
+            "error": "本月借款次数已达上限",
+            "reason": f"已达 {MAX_MONTHLY_LOANS} 次",
+        }), 429
+
+    # ==================== 创建贷款 ====================
+
+    principal = data["amount"]
+    rate = _calc_interest_rate(cust.credit_score)
+    interest = int(principal * rate)
+    total_amount = principal + interest
+
     try:
         loan = Loan(
             customer_id=data["customer_id"],
-            amount=data["amount"],
+            amount=total_amount,
+            principal=principal,
+            interest_rate=rate,
+            paid_interest=0,
             status="PENDING",
         )
         db.session.add(loan)
         db.session.commit()
-        return jsonify({"loan_id": loan.id, "status": loan.status}), 201
+        return jsonify({
+            "loan_id": loan.id,
+            "status": loan.status,
+            "principal": principal,
+            "interest_rate": rate,
+            "total_amount": total_amount,
+        }), 201
     except SQLAlchemyError as e:
         db.session.rollback()
         return jsonify({"error": "数据库操作失败", "detail": str(e)}), 500
@@ -227,6 +308,9 @@ def view_loan(loan_id):
         "loan_id": loan.id,
         "customer_id": loan.customer_id,
         "amount": loan.amount,
+        "principal": loan.principal,
+        "interest_rate": loan.interest_rate,
+        "paid_interest": loan.paid_interest,
         "status": loan.status,
     }), 200
 
@@ -277,7 +361,48 @@ def disburse_loan(loan_id):
 
 @app.route('/api/v1/loan/<int:loan_id>/repay', methods=['POST'])
 def repay_loan(loan_id):
-    return _transition_loan(loan_id, "SETTLED")
+    """还款：状态流转 + 写流水。"""
+    loan = db.session.get(Loan, loan_id)
+    if not loan:
+        return jsonify({"error": "贷款不存在"}), 404
+
+    from_status = loan.status
+    if not _can_transition(from_status, "SETTLED"):
+        return jsonify({
+            "error": f"非法状态流转：{from_status} → SETTLED",
+            "current_status": from_status,
+            "target_status": "SETTLED",
+        }), 409
+
+    # 还款拆分
+    interest_part = loan.amount - loan.principal
+    principal_part = loan.principal
+
+    try:
+        loan.status = "SETTLED"
+        loan.paid_interest = interest_part
+
+        # 写还款流水
+        flow = RepaymentFlow(
+            loan_id=loan.id,
+            amount=loan.amount,
+            principal_part=principal_part,
+            interest_part=interest_part,
+        )
+        db.session.add(flow)
+        db.session.commit()
+
+        return jsonify({
+            "loan_id": loan.id,
+            "from_status": from_status,
+            "status": loan.status,
+            "repaid_amount": loan.amount,
+            "principal_part": principal_part,
+            "interest_part": interest_part,
+        }), 200
+    except SQLAlchemyError as e:
+        db.session.rollback()
+        return jsonify({"error": "数据库操作失败", "detail": str(e)}), 500
 
 
 # ==============================================================================

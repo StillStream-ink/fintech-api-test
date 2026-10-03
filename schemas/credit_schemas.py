@@ -21,17 +21,24 @@ class EligibilityResponse(BaseModel):
 
 class LoanCreateResponse(BaseModel):
     """POST /api/v1/loan 成功响应。"""
+    model_config = ConfigDict(extra="forbid")
     loan_id: int
     status: str
+    principal: int
+    interest_rate: float
+    total_amount: int
 
 
 class LoanDetailResponse(BaseModel):
     """GET /api/v1/view-loan/{id} 成功响应。"""
+    model_config = ConfigDict(extra="forbid")
     loan_id: int
     customer_id: int
     amount: int
+    principal: int
+    interest_rate: float
+    paid_interest: int
     status: str
-
 
 class ErrorResponse(BaseModel):
     """通用错误响应（4xx / 5xx）。"""
