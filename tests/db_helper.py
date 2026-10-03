@@ -81,10 +81,13 @@ def get_customer(customer_id: int) -> dict | None:
 
 
 def get_loan(loan_id: int) -> dict | None:
-    """按 ID 查贷款，返回 dict 或 None。"""
+    """按 ID 查贷款，返回 dict 或 None（含新增字段）。"""
     with get_engine().connect() as conn:
         row = conn.execute(
-            text("SELECT id, customer_id, amount, status FROM loan WHERE id = :id"),
+            text(
+                "SELECT id, customer_id, amount, principal, interest_rate, "
+                "paid_interest, status FROM loan WHERE id = :id"
+            ),
             {"id": loan_id},
         ).mappings().first()
     return dict(row) if row else None
@@ -110,3 +113,4 @@ def list_loans_by_customer(customer_id: int) -> list[dict]:  # pragma: no cover
             {"cid": customer_id},
         ).mappings().all()
     return [dict(r) for r in rows]
+

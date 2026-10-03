@@ -117,7 +117,8 @@ class TestDatabaseConsistency:
         with allure.step("校验 DB 记录字段与请求一致，状态为 PENDING"):
             assert row is not None
             assert row["customer_id"] == sample_customer
-            assert row["amount"] == 50000
+            assert row["principal"] == 50000
+            assert row["amount"] == row["principal"] + int(row["principal"] * row["interest_rate"])
             assert row["status"] == "PENDING"
 
     @allure.story("创建贷款-外键一致")

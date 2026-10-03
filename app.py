@@ -50,23 +50,20 @@ class Customer(db.Model):
 class Loan(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     customer_id = db.Column(db.Integer, nullable=False)
-    # amount 保留为"总应还金额"，便于向后兼容
     amount = db.Column(db.Integer, nullable=False)
-    # 新增：本金 / 利率 / 已还利息
     principal = db.Column(db.Integer, nullable=False, default=0)
     interest_rate = db.Column(db.Float, nullable=False, default=0.0)
     paid_interest = db.Column(db.Integer, nullable=False, default=0)
-
+    status = db.Column(db.String(20), default="PENDING", nullable=False)   
 
 class RepaymentFlow(db.Model):
     """还款流水（每次还款写一条）。"""
     id = db.Column(db.Integer, primary_key=True)
     loan_id = db.Column(db.Integer, nullable=False)
-    amount = db.Column(db.Integer, nullable=False)     # 本次还款金额
-    principal_part = db.Column(db.Integer, nullable=False)   # 其中本金部分
-    interest_part = db.Column(db.Integer, nullable=False)    # 其中利息部分
-
-
+    amount = db.Column(db.Integer, nullable=False)              # 本次还款金额
+    principal_part = db.Column(db.Integer, nullable=False)      # 其中本金部分
+    interest_part = db.Column(db.Integer, nullable=False)  
+        # 其中利息部分
 # ==============================================================================
 # 贷款状态机
 # ==============================================================================
