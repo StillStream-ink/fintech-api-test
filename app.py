@@ -1,5 +1,7 @@
 import os
 from pathlib import Path
+from sqlalchemy import func
+from datetime import datetime, timedelta
 
 # 子进程启动时同步启动覆盖率统计（如果环境变量存在）
 if os.getenv("COVERAGE_PROCESS_START"):
@@ -84,11 +86,22 @@ def _can_transition(from_state, to_state):
 # 通用校验函数
 # ==============================================================================
 def _require_json():
+    # 1. 标准解析（需要 Content-Type: application/json）
     data = request.get_json(silent=True)
-    if data is None:
-        return None, (jsonify({"error": "请求体必须为合法 JSON"}), 400)
-    return data, None
+    if data is not None:
+        return data, None
 
+    # 2. 兜底：手动解析 raw body（兼容 JMeter 等不发 Content-Type 的客户端）
+    import json as _json
+    raw = request.get_data(as_text=True)
+    if raw:
+        try:
+            data = _json.loads(raw)
+            return data, None
+        except _json.JSONDecodeError:
+            pass
+
+    return None, (jsonify({"error": "请求体必须为合法 JSON"}), 400)
 
 def _require_fields(data, fields):
     missing = [f for f in fields if f not in data]
@@ -124,6 +137,10 @@ def _require_str(data, field, min_len=1, max_len=32):
 # ==============================================================================
 @app.route('/api/v1/register', methods=['POST'])
 def register():
+        # ===== 临时调试 =====
+    print(f"[DEBUG] Content-Type = {request.content_type!r}")
+    print(f"[DEBUG] Raw Body    = {request.get_data(as_text=True)[:300]!r}")
+
     data, err = _require_json()
     if err:
         return err
@@ -249,20 +266,17 @@ def create_loan():
             "reason": f"月收入 {cust.income} < {MIN_INCOME}",
         }), 403
 
-    # 规则 3：月借款次数
-    from sqlalchemy import func
-    from datetime import datetime, timedelta
-    month_start = datetime.utcnow() - timedelta(days=30)
-    monthly_count = db.session.query(func.count(Loan.id)).filter(
-        Loan.customer_id == cust.id,
-        Loan.id > 0,
-    ).scalar() or 0
-    if monthly_count >= MAX_MONTHLY_LOANS:
-        return jsonify({
-            "error": "本月借款次数已达上限",
-            "reason": f"已达 {MAX_MONTHLY_LOANS} 次",
-        }), 429
 
+    # 规则 3：未结清贷款数量限制
+    active_count = db.session.query(func.count(Loan.id)).filter(
+        Loan.customer_id == cust.id,
+        Loan.status.in_(["PENDING", "APPROVED", "DISBURSED"]),
+    ).scalar() or 0
+    if active_count >= MAX_MONTHLY_LOANS:
+        return jsonify({
+            "error": "未结清贷款已达上限",
+            "reason": f"已有 {active_count} 笔未结清",
+        }), 429
     # ==================== 创建贷款 ====================
 
     principal = data["amount"]

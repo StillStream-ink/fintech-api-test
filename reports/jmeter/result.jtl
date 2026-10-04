@@ -1,0 +1,5601 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1791092187043,38,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,38,0,31
+1791092187120,3,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,2,0,1
+1791092187123,4,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187128,4,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187133,5,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092187139,4,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187143,4,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187148,4,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187153,4,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187158,4,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187163,4,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187167,6,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,6,0,2
+1791092187173,5,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,2,2,http://127.0.0.1:5000/api/v1/register,5,0,2
+1791092187174,6,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,2,2,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092187179,5,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092187181,6,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092187185,4,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,2,2,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187188,4,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,2,2,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187190,6,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,2,2,http://127.0.0.1:5000/api/v1/view-loan/,6,0,1
+1791092187193,7,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,2,2,http://127.0.0.1:5000/api/v1/view-loan/,7,0,1
+1791092187197,4,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,2,2,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187202,7,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,2,2,http://127.0.0.1:5000/api/v1/register,7,0,2
+1791092187202,9,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,9,0,2
+1791092187210,4,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187212,6,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,2,2,http://127.0.0.1:5000/api/v1/loan,6,0,1
+1791092187214,6,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,2,2,http://127.0.0.1:5000/api/v1/loan,6,0,1
+1791092187219,6,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,2,2,http://127.0.0.1:5000/api/v1/view-loan/,6,0,1
+1791092187221,6,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,2,2,http://127.0.0.1:5000/api/v1/view-loan/,6,0,2
+1791092187226,4,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,2,2,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187228,6,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,2,2,http://127.0.0.1:5000/api/v1/register,6,0,1
+1791092187231,6,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092187235,9,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,9,0,2
+1791092187238,6,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,2,2,http://127.0.0.1:5000/api/v1/loan,6,0,1
+1791092187245,4,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,2,2,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187245,6,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,2,2,http://127.0.0.1:5000/api/v1/view-loan/,6,0,1
+1791092187250,7,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,2,2,http://127.0.0.1:5000/api/v1/view-loan/,7,0,2
+1791092187253,7,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,2,2,http://127.0.0.1:5000/api/v1/register,7,0,2
+1791092187258,8,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,2,2,http://127.0.0.1:5000/api/v1/register,8,0,1
+1791092187261,5,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092187267,5,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092187267,7,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,2,2,http://127.0.0.1:5000/api/v1/loan,7,0,1
+1791092187272,6,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,2,2,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092187275,5,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,2,2,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092187279,5,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,2,2,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092187281,7,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,2,2,http://127.0.0.1:5000/api/v1/register,7,0,1
+1791092187285,5,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,2,2,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092187288,5,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187291,8,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,7,0,1
+1791092187293,7,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,2,2,http://127.0.0.1:5000/api/v1/loan,7,0,2
+1791092187299,6,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,2,2,http://127.0.0.1:5000/api/v1/loan,6,0,2
+1791092187301,6,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,2,2,http://127.0.0.1:5000/api/v1/view-loan/,6,0,2
+1791092187305,7,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,2,2,http://127.0.0.1:5000/api/v1/view-loan/,7,0,1
+1791092187308,7,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,2,2,http://127.0.0.1:5000/api/v1/register,6,0,1
+1791092187312,7,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,2,2,http://127.0.0.1:5000/api/v1/register,6,0,2
+1791092187315,8,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,8,0,2
+1791092187320,6,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092187323,8,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,2,2,http://127.0.0.1:5000/api/v1/loan,8,0,2
+1791092187327,6,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,2,2,http://127.0.0.1:5000/api/v1/loan,6,0,1
+1791092187331,5,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,2,2,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092187334,6,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,2,2,http://127.0.0.1:5000/api/v1/view-loan/,6,0,1
+1791092187337,9,01_注册,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,2,2,http://127.0.0.1:5000/api/v1/register,9,0,1
+1791092187340,7,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,2,2,http://127.0.0.1:5000/api/v1/register,7,0,2
+1791092187347,7,02_资格预审,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,7,0,1
+1791092187348,8,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,2,2,http://127.0.0.1:5000/api/v1/check-eligibility,8,0,1
+1791092187354,6,03_创建借款,400,BAD REQUEST,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,2,2,http://127.0.0.1:5000/api/v1/loan,6,0,1
+1791092187357,5,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,2,2,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092187361,6,04_查询借款,404,NOT FOUND,100并发 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,2,2,http://127.0.0.1:5000/api/v1/view-loan/,6,0,2
+1791092187363,6,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092187370,4,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187374,6,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,2
+1791092187380,3,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187384,5,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092187389,4,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187394,3,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187398,4,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187403,4,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187407,4,01_注册,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,4,0,2
+1791092187412,3,02_资格预审,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187416,4,03_创建借款,400,BAD REQUEST,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187421,4,04_查询借款,404,NOT FOUND,100并发 1-2,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,2,2,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187422,4,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187427,5,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092187432,4,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187437,4,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187441,4,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187446,4,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187450,5,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,2
+1791092187455,4,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187459,3,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187463,4,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187468,4,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187472,3,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187476,4,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187480,4,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187484,4,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187489,3,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187492,5,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092187498,4,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187502,4,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187506,4,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187510,5,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092187516,4,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092187520,3,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187524,4,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187528,4,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187533,3,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187537,3,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187541,3,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092187544,4,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187548,6,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092187555,4,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187559,4,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187563,4,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187567,6,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,2
+1791092187574,4,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187578,4,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187582,4,01_注册,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187586,5,02_资格预审,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092187592,4,03_创建借款,400,BAD REQUEST,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187596,3,04_查询借款,404,NOT FOUND,100并发 1-3,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187671,5,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092187677,6,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092187684,5,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092187690,4,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187695,3,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187699,4,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187704,4,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187709,4,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187713,5,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,5,0,2
+1791092187719,3,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187723,5,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092187729,3,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187733,4,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187737,5,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092187743,4,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187747,3,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187751,4,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187755,5,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092187760,5,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092187765,4,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187770,4,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187774,4,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187778,4,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187783,4,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092187787,3,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187791,4,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187795,5,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092187801,4,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187805,4,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187809,4,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187813,4,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187817,5,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,2
+1791092187822,3,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187826,4,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092187831,3,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092187835,3,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187839,3,01_注册,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092187843,3,02_资格预审,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187847,3,03_创建借款,400,BAD REQUEST,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187851,4,04_查询借款,404,NOT FOUND,100并发 1-4,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092187922,8,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,8,0,3
+1791092187932,7,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,7,0,2
+1791092187939,6,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,2
+1791092187945,5,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,2
+1791092187951,4,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092187956,3,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092187960,3,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092187964,4,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092187968,4,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,4,0,2
+1791092187973,6,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092187980,4,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092187985,5,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092187990,5,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092187995,6,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,2
+1791092188001,4,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,2
+1791092188006,4,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188010,4,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188014,3,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188018,4,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188022,4,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,2
+1791092188027,3,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092188031,4,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188035,4,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188040,4,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188044,4,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188048,3,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188052,4,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188057,4,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188061,4,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188065,6,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092188072,3,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092188076,4,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188080,4,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188085,5,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092188091,4,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188096,3,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092188099,4,01_注册,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188104,4,02_资格预审,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188108,5,03_创建借款,400,BAD REQUEST,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188114,4,04_查询借款,404,NOT FOUND,100并发 1-5,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188171,5,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092188177,6,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092188184,7,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,7,0,1
+1791092188192,8,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,8,0,1
+1791092188200,8,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,8,0,2
+1791092188209,9,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,9,0,1
+1791092188219,6,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188225,5,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188230,4,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188235,4,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188239,5,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188244,4,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188249,4,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,4,0,0
+1791092188253,6,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092188259,4,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188264,3,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188268,4,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188273,3,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188276,4,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188281,3,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188285,5,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092188290,4,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188295,3,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092188299,4,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,0
+1791092188303,5,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092188308,4,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188312,4,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188316,4,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188321,3,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188325,5,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092188331,3,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092188335,4,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188339,4,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188343,4,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188347,5,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188352,5,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092188358,3,01_注册,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092188362,3,02_资格预审,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188365,5,03_创建借款,400,BAD REQUEST,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188371,3,04_查询借款,404,NOT FOUND,100并发 1-6,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092188419,19,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,19,0,1
+1791092188439,5,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092188444,4,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188449,3,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188453,4,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188457,4,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188461,3,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092188465,3,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188469,4,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188474,4,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092188478,4,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188483,3,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092188487,4,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,4,0,0
+1791092188491,4,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188495,4,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188500,4,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,0
+1791092188504,4,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188509,5,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092188514,4,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188519,4,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188523,5,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092188528,4,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188532,4,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188537,4,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188541,5,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092188546,3,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188550,4,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,0
+1791092188555,3,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092188558,3,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188562,4,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188566,5,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188572,3,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188575,3,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188579,4,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188583,5,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188589,2,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,2,0,0
+1791092188592,4,01_注册,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,4,0,0
+1791092188596,7,02_资格预审,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,7,0,1
+1791092188603,4,03_创建借款,400,BAD REQUEST,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188608,13,04_查询借款,404,NOT FOUND,100并发 1-7,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,13,0,11
+1791092188669,3,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188673,4,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188677,5,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188683,4,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188687,3,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188691,3,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188695,3,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092188699,4,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188703,4,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188707,4,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188711,4,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188716,4,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188720,5,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092188725,5,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092188730,4,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188734,4,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188739,3,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188743,6,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092188749,4,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188754,3,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092188758,3,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188762,4,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188766,5,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188772,5,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092188777,4,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188781,7,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,7,0,1
+1791092188788,5,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092188793,4,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188797,8,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,8,0,1
+1791092188806,4,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188811,3,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092188815,3,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092188819,5,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092188825,3,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188828,4,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188832,5,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092188838,3,01_注册,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188842,4,02_资格预审,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188847,3,03_创建借款,400,BAD REQUEST,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092188851,5,04_查询借款,404,NOT FOUND,100并发 1-8,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092188920,3,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188924,4,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188928,4,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092188932,4,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188936,5,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092188942,3,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188946,3,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092188950,3,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092188954,3,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092188958,6,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092188964,4,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188969,4,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188973,4,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092188977,4,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092188981,4,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092188986,5,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092188991,4,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092188995,3,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092188999,4,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,0
+1791092189004,4,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189008,3,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189012,4,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092189016,4,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189021,4,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189026,3,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092189029,5,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189034,4,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189039,4,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189043,3,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189046,5,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189051,5,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092189056,3,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189060,3,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189064,3,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092189068,5,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092189074,3,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189077,5,01_注册,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092189083,5,02_资格预审,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,0
+1791092189088,3,03_创建借款,400,BAD REQUEST,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189092,3,04_查询借款,404,NOT FOUND,100并发 1-9,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189168,3,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189172,3,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092189176,3,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092189180,3,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189184,4,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189188,5,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189193,4,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189197,4,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189201,4,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189205,5,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189211,3,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092189214,4,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189218,4,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189223,5,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189228,4,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189232,4,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189237,4,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189242,5,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189247,4,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189252,5,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092189257,4,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189261,5,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092189266,4,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189270,4,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189275,4,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189280,3,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092189283,5,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,2
+1791092189288,4,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189292,3,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189296,4,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092189301,4,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189305,4,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189309,3,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189313,5,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189319,4,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189323,3,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189327,3,01_注册,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092189330,3,02_资格预审,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092189334,4,03_创建借款,400,BAD REQUEST,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,0
+1791092189338,4,04_查询借款,404,NOT FOUND,100并发 1-10,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189420,5,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,5,0,2
+1791092189426,6,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189432,6,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,6,0,1
+1791092189439,4,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189444,4,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189449,5,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189455,3,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092189459,3,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189463,3,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092189467,4,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092189471,4,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189476,4,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189480,3,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189484,5,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189490,3,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189494,3,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189498,4,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189503,3,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092189507,3,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189511,3,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189515,3,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092189519,5,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,2
+1791092189524,4,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189528,3,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189532,4,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,4,0,0
+1791092189537,5,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189542,3,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189546,3,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092189550,4,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189554,5,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,2
+1791092189560,3,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092189564,11,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,11,0,9
+1791092189575,4,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189579,4,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092189584,5,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092189590,7,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,7,0,1
+1791092189598,8,01_注册,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,8,0,1
+1791092189607,3,02_资格预审,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092189611,4,03_创建借款,400,BAD REQUEST,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189615,4,04_查询借款,404,NOT FOUND,100并发 1-11,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189669,4,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189673,6,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,2
+1791092189679,4,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189684,4,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189688,5,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092189694,3,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092189698,3,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092189702,4,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189707,4,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189712,3,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092189715,4,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189719,4,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189723,5,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092189728,4,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092189732,5,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092189738,3,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092189741,3,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189745,4,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092189749,5,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189754,4,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189758,4,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189762,4,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092189766,4,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189770,4,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189774,3,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189778,4,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092189782,4,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,0
+1791092189787,4,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189791,4,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189796,3,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,2,0,0
+1791092189799,4,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189803,4,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189807,4,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189811,4,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092189816,4,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,0
+1791092189820,3,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092189824,3,01_注册,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092189827,5,02_资格预审,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092189832,4,03_创建借款,400,BAD REQUEST,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189837,4,04_查询借款,404,NOT FOUND,100并发 1-12,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189920,5,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189926,6,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092189932,7,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,7,0,1
+1791092189940,6,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092189946,7,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,6,0,2
+1791092189954,7,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,7,0,1
+1791092189961,4,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092189966,4,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092189970,4,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092189975,3,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092189979,3,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092189983,5,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092189988,3,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092189992,4,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092189996,3,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190000,4,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,0
+1791092190007,3,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092190011,3,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092190014,5,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190020,5,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092190026,4,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190030,5,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092190036,5,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,0
+1791092190041,3,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190045,3,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092190049,3,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092190053,4,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190057,3,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190061,3,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092190065,3,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,2,0,0
+1791092190068,5,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190074,3,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190078,6,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,6,0,2
+1791092190085,35,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,35,0,2
+1791092190120,6,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,6,0,2
+1791092190126,4,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190131,3,01_注册,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092190135,6,02_资格预审,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092190142,5,03_创建借款,400,BAD REQUEST,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190148,4,04_查询借款,404,NOT FOUND,100并发 1-13,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190169,3,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092190173,4,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092190177,4,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190182,3,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092190186,3,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092190190,4,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190194,4,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190199,3,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092190203,4,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092190207,5,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092190212,4,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190216,4,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190220,5,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092190226,4,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190230,4,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190234,4,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190239,4,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190244,3,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092190248,4,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190253,4,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190257,4,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190261,3,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092190264,5,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190270,5,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,0
+1791092190275,4,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190280,5,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092190285,5,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190290,4,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190294,4,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190298,4,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092190302,5,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190307,3,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190311,4,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092190315,5,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092190321,3,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190324,4,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190328,4,01_注册,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190333,4,02_资格预审,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092190338,3,03_创建借款,400,BAD REQUEST,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190342,4,04_查询借款,404,NOT FOUND,100并发 1-14,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092190419,4,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190424,5,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190429,4,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190434,5,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092190440,3,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092190444,4,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190449,3,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190453,3,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092190456,5,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092190461,3,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092190465,3,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190468,4,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190473,3,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092190477,3,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092190480,3,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190483,4,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190488,3,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092190491,4,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190496,3,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190499,4,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190503,4,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190507,4,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190512,3,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190515,4,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190519,5,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092190525,3,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092190528,3,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190531,4,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190536,6,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,6,0,0
+1791092190543,3,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092190546,4,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190550,4,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190554,3,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092190558,4,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092190562,4,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190566,4,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190570,4,01_注册,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190575,3,02_资格预审,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092190578,4,03_创建借款,400,BAD REQUEST,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190583,4,04_查询借款,404,NOT FOUND,100并发 1-15,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190669,5,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092190674,5,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092190680,5,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190686,5,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092190692,5,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190697,7,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,7,0,1
+1791092190705,4,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190709,4,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190714,4,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,4,0,0
+1791092190718,4,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190722,5,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190728,3,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092190731,5,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092190736,4,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190741,3,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190745,3,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,291,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092190748,4,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190753,4,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190758,3,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092190761,4,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190765,5,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190770,3,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092190774,3,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190778,3,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190782,4,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092190786,3,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092190789,4,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190793,4,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190797,4,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190801,5,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092190806,3,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190810,3,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190814,4,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190819,3,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092190823,3,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190826,4,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190830,3,01_注册,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092190837,4,02_资格预审,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092190841,3,03_创建借款,400,BAD REQUEST,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190845,3,04_查询借款,404,NOT FOUND,100并发 1-16,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190920,5,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190927,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190932,5,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092190937,6,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,6,0,2
+1791092190943,6,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,6,0,1
+1791092190950,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190954,4,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,2
+1791092190959,3,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092190962,4,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190967,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092190971,4,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092190975,4,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092190979,2,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,2,0,0
+1791092190982,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092190986,4,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092190990,4,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092190994,4,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,302,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092190998,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191003,3,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191006,3,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191010,4,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092191014,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191018,4,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191022,4,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191027,4,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191031,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191035,4,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191039,4,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191044,3,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191048,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191053,3,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191056,3,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191060,3,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092191064,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191068,4,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191072,4,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191076,3,01_注册,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191080,4,02_资格预审,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092191084,4,03_创建借款,400,BAD REQUEST,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191089,3,04_查询借款,404,NOT FOUND,100并发 1-17,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092191169,4,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191173,6,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,291,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092191179,5,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092191185,5,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191190,4,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191194,3,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092191197,3,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092191200,5,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092191205,4,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191209,7,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092191216,4,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191220,4,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191224,4,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191228,3,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092191232,3,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191236,3,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092191239,5,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,5,0,1
+1791092191244,5,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191249,4,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191253,4,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191257,3,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191261,4,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,303,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191266,3,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191269,4,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191273,4,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191277,4,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191281,4,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092191285,3,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191289,4,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191294,4,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,307,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191298,3,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092191302,4,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191306,4,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191310,4,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191314,4,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191319,3,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191323,4,01_注册,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,4,0,0
+1791092191327,3,02_资格预审,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092191331,3,03_创建借款,400,BAD REQUEST,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191335,5,04_查询借款,404,NOT FOUND,100并发 1-18,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092191420,3,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191424,5,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191429,5,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092191434,5,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092191439,4,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191443,6,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092191449,4,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191454,3,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092191457,4,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191461,5,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191466,4,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,278,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191471,3,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092191474,4,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191479,4,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092191483,4,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191488,3,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191491,4,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191496,3,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,1
+1791092191500,3,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191504,4,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,295,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,0
+1791092191508,4,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191512,4,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,305,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191517,4,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092191521,4,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191525,4,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191530,4,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092191534,5,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191539,3,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,289,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191543,3,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092191547,3,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,311,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,3,0,0
+1791092191550,4,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191554,4,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,287,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191558,3,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191562,4,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092191566,4,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,288,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191570,4,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,285,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191574,4,01_注册,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,284,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191578,4,02_资格预审,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,295,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191582,4,03_创建借款,400,BAD REQUEST,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191587,4,04_查询借款,404,NOT FOUND,100并发 1-19,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191670,3,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191674,5,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,293,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,1
+1791092191679,4,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191684,5,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,297,1,1,http://127.0.0.1:5000/api/v1/view-loan/,5,0,1
+1791092191689,4,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/register,4,0,1
+1791092191694,5,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191700,5,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,5,0,1
+1791092191705,4,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,303,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191710,5,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,292,1,1,http://127.0.0.1:5000/api/v1/register,4,0,0
+1791092191715,6,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191721,4,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,298,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092191725,4,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191729,3,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191733,5,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191738,3,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191741,4,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191746,3,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,296,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092191749,5,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191755,3,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,280,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191759,3,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092191762,3,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,286,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191766,4,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,4,0,0
+1791092191771,3,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191774,4,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,299,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191778,3,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191781,5,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,299,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191787,3,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,282,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,1
+1791092191791,3,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,293,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,0
+1791092191795,3,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,0
+1791092191798,6,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,297,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,6,0,1
+1791092191805,3,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/loan,3,0,0
+1791092191808,4,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
+1791092191812,3,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,294,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191816,5,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,301,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,0
+1791092191821,4,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191825,3,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,301,1,1,http://127.0.0.1:5000/api/v1/view-loan/,3,0,1
+1791092191828,3,01_注册,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,300,1,1,http://127.0.0.1:5000/api/v1/register,3,0,1
+1791092191832,5,02_资格预审,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[4]]]00
+
+****** comparison: [[[2]]]00
+
+/",245,309,1,1,http://127.0.0.1:5000/api/v1/check-eligibility,5,0,1
+1791092191837,4,03_创建借款,400,BAD REQUEST,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[400]]]
+
+****** comparison: [[[201]]]
+
+/",245,290,1,1,http://127.0.0.1:5000/api/v1/loan,4,0,1
+1791092191841,4,04_查询借款,404,NOT FOUND,100并发 1-20,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",388,283,1,1,http://127.0.0.1:5000/api/v1/view-loan/,4,0,1
