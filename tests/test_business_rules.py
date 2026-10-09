@@ -2,7 +2,7 @@
 import allure
 import pytest
 
-from tests.db_helper import get_loan_full
+from tests.db_helper import get_loan
 
 
 @allure.feature("信贷业务规则")
@@ -74,7 +74,7 @@ class TestBusinessRules:
             assert resp.status_code == 201
 
         with allure.step(f"校验利率 = {expected_rate}"):
-            loan = get_loan_full(resp.json()["loan_id"])
+            loan = get_loan(resp.json()["loan_id"])
             assert loan["interest_rate"] == expected_rate
 
     @allure.story("频率规则")

@@ -9,11 +9,9 @@ import allure
 import pytest
 
 from tests.db_helper import (
-    count_repayment_flows,
     get_loan,
     get_repayment_flows,
 )
-
 
 @allure.feature("金融对账")
 class TestReconciliation:
