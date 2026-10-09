@@ -1,13 +1,11 @@
-import os
+﻿import os
 import logging
 from pathlib import Path
 from sqlalchemy import func
 from datetime import datetime, timedelta
 from decimal import Decimal, ROUND_HALF_UP
-
 # 配置基础日志，保证logging.exception可以输出堆栈
 logging.basicConfig(level=logging.INFO)
-
 # 子进程启动时同步启动覆盖率统计（如果环境变量存在）
 if os.getenv("COVERAGE_PROCESS_START"):
     import coverage
@@ -16,13 +14,11 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
 app = Flask(__name__)
-
 # 全局异常捕获，防止内部异常详情泄露给前端
 @app.errorhandler(Exception)
 def handle_exception(e):
     logging.exception("Unhandled exception occurred")
     return jsonify({"error": "internal error"}), 500
-
 # ==============================================================================
 # 数据库配置
 # 优先读 DATABASE_URL（MySQL / 其他数据库）
@@ -62,8 +58,8 @@ class RepaymentFlow(db.Model):
     """还款流水（每次还款写一条）。"""
     id = db.Column(db.Integer, primary_key=True)
     loan_id = db.Column(db.Integer, nullable=False)
-    amount = db.Column(db.Integer, nullable=False)              # 本次还款金额
-    principal_part = db.Column(db.Integer, nullable=False)      # 其中本金部分
+    amount = db.Column(db.Integer, nullable=False)            # 本次还款金额
+    principal_part = db.Column(db.Integer, nullable=False)    # 其中本金部分
     interest_part = db.Column(db.Integer, nullable=False)
         # 其中利息部分
 # ==============================================================================
@@ -191,7 +187,7 @@ def check_eligibility():
 MIN_CREDIT_SCORE = 600
 MIN_INCOME = 5000
 MAX_LOAN_RATIO = 0.8          # 单笔 ≤ 资质的 80%
-MAX_MONTHLY_LOANS = 5          # 月借款次数上限
+MAX_MONTHLY_LOANS = 5         # 月借款次数上限
 # 利率规则：按信用分区间
 INTEREST_RATES = [
     (800, 0.02),   # 800+ -> 2%
