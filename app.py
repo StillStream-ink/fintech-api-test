@@ -4,8 +4,11 @@ from pathlib import Path
 from sqlalchemy import func
 from datetime import datetime, timedelta
 from decimal import Decimal, ROUND_HALF_UP
-# 配置基础日志，保证logging.exception可以输出堆栈
-logging.basicConfig(level=logging.INFO)
+# 配置日志：规范日志格式
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
 # 子进程启动时同步启动覆盖率统计（如果环境变量存在）
 if os.getenv("COVERAGE_PROCESS_START"):
     import coverage
@@ -13,12 +16,21 @@ if os.getenv("COVERAGE_PROCESS_START"):
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
+from werkzeug.exceptions import HTTPException
 app = Flask(__name__)
-# 全局异常捕获，防止内部异常详情泄露给前端
+
+# ====================== 新增全局异常处理器 ======================
 @app.errorhandler(Exception)
-def handle_exception(e):
-    logging.exception("Unhandled exception occurred")
-    return jsonify({"error": "internal error"}), 500
+def handle_uncaught_exception(e):
+    """全局异常处理：详细日志记录到服务端，响应只返回通用错误。
+    防止 str(e) 泄露表结构 / SQL 语句 / 文件路径。
+    """
+    # HTTP 异常（404 / 400 等）正常返回
+    if isinstance(e, HTTPException):
+        return jsonify({"error": e.description}), e.code
+    # 未捕获异常：记录完整堆栈，前端响应不暴露内部细节
+    logging.exception("Unhandled exception")
+    return jsonify({"error": "internal server error"}), 500
 # ==============================================================================
 # 数据库配置
 # 优先读 DATABASE_URL（MySQL / 其他数据库）
@@ -151,7 +163,7 @@ def register():
     except SQLAlchemyError as e:
         db.session.rollback()
         logging.exception("register db error")
-        return jsonify({"error": "数据库操作失败"}), 500
+        return jsonify({"error": "database error"}), 500
 # ==============================================================================
 # 接口：资格预审
 # ==============================================================================
@@ -269,7 +281,7 @@ def create_loan():
     except SQLAlchemyError as e:
         db.session.rollback()
         logging.exception("create_loan db error")
-        return jsonify({"error": "数据库操作失败"}), 500
+        return jsonify({"error": "database error"}), 500
 # ==============================================================================
 # 接口：查询贷款
 # ==============================================================================
@@ -312,7 +324,7 @@ def _transition_loan(loan_id, target_status):
     except SQLAlchemyError as e:
         db.session.rollback()
         logging.exception(f"transition loan {loan_id} db error")
-        return jsonify({"error": "数据库操作失败"}), 500
+        return jsonify({"error": "database error"}), 500
 @app.route('/api/v1/loan/<int:loan_id>/approve', methods=['POST'])
 def approve_loan(loan_id):
     return _transition_loan(loan_id, "APPROVED")
@@ -361,7 +373,7 @@ def repay_loan(loan_id):
     except SQLAlchemyError as e:
         db.session.rollback()
         logging.exception(f"repay loan {loan_id} db error")
-        return jsonify({"error": "数据库操作失败"}), 500
+        return jsonify({"error": "database error"}), 500
 # ==============================================================================
 # 接口：重置数据库（仅测试用）
 # ==============================================================================
@@ -373,7 +385,7 @@ def reset_db():
         return jsonify({"msg": "db reset success"}), 200
     except SQLAlchemyError as e:
         logging.exception("reset db error")
-        return jsonify({"error": "数据库操作失败"}), 500
+        return jsonify({"error": "database error"}), 500
 # ==============================================================================
 # 启动入口
 # ==============================================================================
