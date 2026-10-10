@@ -23,7 +23,8 @@
 | 能力 | 说明 |
 |---|---|
 | Mock 服务 | Flask + SQLAlchemy + SQLite，实现完整贷款状态机 |
-| 功能测试 | 118 个用例，覆盖注册、资格预审、贷款全生命周期 |
+| 测试用例 | 131 passed + 3 xfailed（共 134 个场景） |
+| 覆盖率 | 100%（跨 SQLite / MySQL 双库互补） |
 | 契约测试 | pydantic v2 校验响应字段名/类型/必填项 |
 | 数据一致性 | 接口调用 + SQLite 直连双检 |
 | 状态机测试 | PENDING → APPROVED → DISBURSED → SETTLED 全路径 |
@@ -135,7 +136,7 @@ allure serve ./allure-results
 ```
 
 浏览器自动打开，能看到：
-- 6 个 Feature，104 个用例
+- 6 个 Feature，134 个用例
 - 每个用例展开后有分步骤（Allure step）
 - 3 个 xfail 用例带标记
 
@@ -174,7 +175,9 @@ PENDING ──→ APPROVED ──→ DISBURSED ──→ SETTLED
 | `test_contract.py` | pydantic 契约校验 | 8 |
 | `test_db_consistency.py` | 接口 + SQLite 双检 | 10 |
 | `test_loan_state_machine.py` | 状态机全路径 + 非法流转 | 16 |
-| **合计** | | **104** |
+| `test_concurrency.py` | 并发测试（借款/还款/注册），发现 BUG-007 | 3 |
+| `test_precision.py` | 金额精度（Decimal 计算 + 边界金额） | 5 |
+| **合计** | | **134** |
 
 ---
 
@@ -320,6 +323,7 @@ Checkout → Setup Python → Install Deps → pytest + 覆盖率 → 质量门�
 | BUG-004 | 🟠 中 | 创建贷款未实现幂等 |
 | BUG-005 | 🔴 高 | 水平越权访问 |
 | BUG-006 | 🔴 高 | 缺少 token 鉴权 |
+| BUG-007 | 🟠 中 | 并发还款生成重复流水 |
 
 这 3 个 BUG 对应 3 个 `xfail(strict=True)` 用例。修复后测试会 FAILED，强制移除 xfail 标记。
 

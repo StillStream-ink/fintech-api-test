@@ -18,7 +18,7 @@
 | BUG-004 | 🟠 中 | 贷款 | 创建贷款接口未实现幂等，重复提交生成多条记录 | `tests/test_db_consistency.py::TestDatabaseConsistency::test_create_loan_idempotent_db` | 🔴 待修复 |
 | BUG-005 | 🔴 高 | 安全 | 缺少权限控制，存在水平越权漏洞 | `tests/test_credit.py::TestSecurityKnownBugs::test_loan_horizontal_privilege` | 🔴 待修复 |
 | BUG-006 | 🔴 高 | 安全 | 无 token 鉴权，未授权可以直接访问接口 | `tests/test_credit.py::TestSecurityKnownBugs::test_loan_unauthorized` | 🔴 待修复 |
-
+| BUG-007 | 🟠 中 | 并发 | 并发还款生成重复流水 | `tests/test_concurrency.py::TestConcurrency::test_concurrent_repayment` | 🔴 待修复 |
 ---
 
 ## BUG-004：创建贷款未实现幂等
@@ -96,8 +96,34 @@
 - 未携带合法凭证一律返回 `401`
 
 **关联测试**：`tests/test_credit.py::TestSecurityKnownBugs::test_loan_unauthorized`
-
 ---
+
+## BUG-007：并发还款生成重复流水
+
+**严重程度**：🟠 中
+
+**现象**：同一笔贷款被 3 个线程并发还款，DB 里生成 2~3 条流水（预期 1 条）。
+
+**复现步骤**：
+1. 创建贷款并走到 DISBURSED 状态
+2. 启动 3 个线程同时调用 `POST /api/v1/loan/{id}/repay`
+3. 查 `repayment_flow` 表记录数
+
+**期望**：只生成 1 条流水
+
+**实际**：生成 2~3 条流水
+
+**影响**：并发下重复还款可能导致客户被重复扣款、对账数据异常、资金安全风险。
+
+**修复建议**：
+- 方案 A：数据库层加乐观锁（version 字段）
+- 方案 B：`SELECT ... FOR UPDATE` 悲观锁
+- 方案 C：Redis 分布式锁
+- 方案 D：状态字段唯一约束 + 状态转换原子性
+
+**关联测试**：`tests/test_concurrency.py::TestConcurrency::test_concurrent_repayment`
+---
+
 
 ## 维护指南
 
@@ -121,3 +147,4 @@ py -m pytest tests/test_credit.py -v
 # 5. 提交
 git add KNOWN_BUGS.md tests/test_credit.py
 git commit -m "fix: 修复 BUG-005 水平越权访问"
+
